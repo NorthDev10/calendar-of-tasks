@@ -1,0 +1,128 @@
+html {
+  padding: 20px 0;
+}
+
+body {
+  padding: 0 30px;
+}
+
+.header {
+  margin-left: 100px;
+}
+
+th {
+  text-align: center;
+}
+
+.table-responsive {
+  overflow: hidden;
+}
+
+.btnNewLine {
+  white-space: pre-line;
+}
+
+.calendarCellFont {
+  text-align: center;
+  font-size: 32pt;
+}
+
+.calendarCellBorder {
+  border-left: 1px solid #ddd;
+}
+
+#calendar {
+  user-select: none;
+}
+
+#calendar .today {
+  border: 5px solid #e22824;
+}
+
+#calendar td:hover {
+  background: #f9f8f8;
+  cursor: pointer;
+}
+
+#calendar td:active {
+  background: #d8d8d8;
+}
+
+#calendar td.selectedDay {
+  background: #ffe894;
+}
+
+#date {
+  font-size: 30pt;
+  font-weight: bold;
+  padding-left: 34px;
+}
+
+#choosePerson ul {
+  top: auto;
+  left: auto;
+  width: 195px;
+}
+
+.person {
+  clear: left;
+  min-width: 170px;
+  display: inline-block;
+  border: 3px solid #98BF21;
+  margin: 3px;
+  padding-bottom: 10px;
+}
+
+.person ul {
+  padding: 5px 0;
+  text-align: center;
+  font-size: 13pt;
+}
+
+.person li {
+  list-style: none;
+}
+
+.person .head {
+  background: #A7C942;
+  border-bottom: 3px solid #98BF21;
+  color: white;
+  font-weight: bold;
+  padding: 9px 10px;
+  font-size: 18px;
+}
+
+.person .bodyPerson {
+  padding: 10px;
+}
+
+.person input {
+  margin-bottom: 8px;
+}
+
+.txtCenter {
+  text-align: center;
+}
+
+.taskComplete {
+  color: #00CC00;
+}
+
+.closeTask {
+  color: #e02727;
+  padding-left: 5px;
+  cursor: pointer;
+}
+
+.closeTask:hover {
+  color: #fd4c4c;
+}
+
+.closeTask:active {
+  color: #b31212;
+}
+
+.fSize20 {
+  font-size: 20pt;
+  padding: 0;
+}
