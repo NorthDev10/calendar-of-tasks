@@ -9,8 +9,6 @@
 <title>Журнал заданий</title>
 <link href="/css/bootstrap.min.css" rel="stylesheet">
 <?=$CSS?>
-<script defer src="/js/jquery.min.js"></script>
-<script defer src="/js/bootstrap.min.js"></script>
 <?=$JavaScript?>
 </head>
 <body>

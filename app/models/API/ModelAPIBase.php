@@ -68,12 +68,12 @@ class ModelAPIBase extends Model {
   protected function structuringTasks(array $tasks) {
     $newTasksList = array();
     for($i = 0; $i < count($tasks); ++$i) {
-      $newTasksList[$tasks[$i]["userId"]]["userId"] = $tasks[$i]["userId"];
+      $newTasksList[$tasks[$i]["userId"]]["userId"] = (int)$tasks[$i]["userId"];
       $newTasksList[$tasks[$i]["userId"]]["userName"] = $tasks[$i]["name"];
       $newTasksList[$tasks[$i]["userId"]]["userTasks"][] = array(
-        "taskId" => $tasks[$i]["taskId"],
+        "taskId" => (int)$tasks[$i]["taskId"],
         "taskName" => $tasks[$i]["taskName"],
-        "status" => $tasks[$i]["status"]
+        "status" => (int)$tasks[$i]["status"]
       );
     }
     return array_values($newTasksList);
@@ -103,6 +103,8 @@ class ModelAPIBase extends Model {
         $usersPerformArr['usersPerform'][] = $row;
     }
     $date = date_parse($date);
+    $usersPerformArr["month"] = $date["month"];
+    $usersPerformArr["year"] = $date["year"];
     $usersPerformArr["daysInMonth"] = date('t', mktime(0, 0, 0, $date["month"], 1, $date["year"]));
     $usersPerformArr["firstDayOfWeek"] = date('N', mktime(0, 0, 0, $date["month"], 1, $date["year"]));
     return $usersPerformArr;
@@ -131,7 +133,8 @@ class ModelAPIBase extends Model {
   }
 
   public function cancelTask($taskId) {
-    if((int)$taskId > 0) {
+    $taskId = (int)$taskId;
+    if($taskId > 0) {
       $stmt = $this->db->prepare("DELETE FROM tasks WHERE taskId = ?");
       $stmt->bindValue(1, $taskId, PDO::PARAM_INT);
       return array("status" => $stmt->execute());

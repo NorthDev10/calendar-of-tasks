@@ -1,0 +1,9 @@
+:local(.basicContainer) {
+  background: green;
+  color: green;
+}
+
+:local(.container) {
+  composes: basicContainer;
+  background: blue;
+}
