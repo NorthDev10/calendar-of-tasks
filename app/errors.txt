@@ -1,0 +1,14 @@
+29.08.17, 21:46:36 PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'Дмитрий' for key 'name' in /home/ubuntu/workspace/app/models/API/ModelAPIBase.php:117
+Stack trace:
+#0 /home/ubuntu/workspace/app/models/API/ModelAPIBase.php(117): PDOStatement->execute()
+#1 /home/ubuntu/workspace/app/controllers/API/ControllerAPIBase.php(30): ModelAPIBase->addUser('\xD0\x94\xD0\xBC\xD0\xB8\xD1\x82\xD1\x80\xD0\xB8\xD0\xB9')
+#2 /home/ubuntu/workspace/app/core/APIRoute.php(27): ControllerAPIBase->actionAddNewUser()
+#3 /home/ubuntu/workspace/api.php(9): APIRoute::start()
+#4 {main}
+29.08.17, 21:46:51 PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'Дмитрий' for key 'name' in /home/ubuntu/workspace/app/models/API/ModelAPIBase.php:117
+Stack trace:
+#0 /home/ubuntu/workspace/app/models/API/ModelAPIBase.php(117): PDOStatement->execute()
+#1 /home/ubuntu/workspace/app/controllers/API/ControllerAPIBase.php(30): ModelAPIBase->addUser('\xD0\x94\xD0\xBC\xD0\xB8\xD1\x82\xD1\x80\xD0\xB8\xD0\xB9')
+#2 /home/ubuntu/workspace/app/core/APIRoute.php(27): ControllerAPIBase->actionAddNewUser()
+#3 /home/ubuntu/workspace/api.php(9): APIRoute::start()
+#4 {main}
